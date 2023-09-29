@@ -1,0 +1,125 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/edcetclass.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    overflow: hidden;
+    text-decoration: none;
+}
+body a{
+    text-decoration:none;
+    color: black;
+}
+.header{
+    max-height: 10vh;
+    width: 98.5vw;
+    background-color: aliceblue;
+    margin: 0;
+    border-radius: 5px;
+}
+.logo{
+    contain: content;
+}
+.logo img{
+    height: 10vh;
+}
+.main{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 98vw;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 2px solid rgb(0, 255, 251);
+    filter: drop-shadow(6px -3px 2px #162021);
+    border-radius: 16px;
+}
+.container img{
+    width: 100%;
+    border-radius: 6px 6px 7px 7px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: small;
+    font-weight: lighter;
+    height: 3vw;
+    background-color: #ffb502;
+    border-radius: 16px 12px 1px 1px;
+    filter: drop-shadow(0px 4px 4px rgb(7, 5, 5));
+}
+@media only screen and (max-width: 700px)  {  
+    .main{
+        flex-wrap: wrap;
+    }
+    .main{
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+.container {
+    --g: 4px;     /* the gap */
+    --b: 2px;    /* border thickness*/
+    --c: #ffb502; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #ffb502 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(0%);
+    transition: .3s;
+  }
+  img:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+
+
+ .logo img {
+    --g: 4px;     /* the gap */
+    --b: 0px;    /* border thickness*/
+    --c: #ffb502; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    transition: .3s;
+  }
+ .logo img:hover {
+    --_p: 75%;
+    --b: 10px;
+    filter: drop-shadow(10px 10px 10px #ffb502);
+    border-radius: 50%;
+  }
+ 

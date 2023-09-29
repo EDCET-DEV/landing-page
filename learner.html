@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDCET</title>
+<link rel="icon" type="image/x-icon" href="/img/edceticon.png">
+    <link rel="stylesheet" href="/css/learner.css">                                  
+     <link rel="stylesheet" href="css/style.css">                                
+     <!-- Templatemo style -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+            <img src="/img/edceticon.png" alt="" srcset="">
+        </a>
+        </div>
+    </header>
+    <div class="main">
+    <div class="  polaroid">
+      <a href="http://192.168.1.110:8090">
+      <img src="/img/learn.png" alt="edcet image" style="width:100%">
+      <div class="container">
+      <p>Learn</p>
+    </a>
+      </div>
+    
+    </div>
+    <div class="polaroid">
+      <a href="http://192.168.1.110:8080">
+      <img src="/img/create.png" alt="sugarizer image" style="width:100%">
+      <div class="container">
+        <p>Create</p>
+      </a>
+      </div>
+    </div>
+    <!--Hey! This is the original version of Simple CSS Waves-->
+    <div class="header">
+        <!--Content before waves-->
+        
+        <!--Waves Container-->
+        <div> <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="#ffb3026b" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(22, 181, 192, 0.384)" />
+                    <use class="lower" xlink:href="#gentle-wave" x="48" y="5" fill=" rgba(0, 217, 255, 0.404)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffff" />
+                </g>
+            </svg> </div>
+        <!--Waves end-->
+    </div>
+    <!--Header ends-->
+    <!--Content starts-->
+    <!--Content ends-->
+
+    <div id="loader-wrapper">
+            
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>             
+
+
+    <script>
+           function adjustHeightOfPage(pageNo) {
+
+            
+}
+
+/*
+    Everything is loaded including images.
+*/
+$(window).load(function(){
+
+    adjustHeightOfPage(1); // Adjust page height
+
+    
+
+    /* Collapse menu after click 
+    -----------------------------------------*/
+    $('#tmNavbar a').click(function(){
+        $('#tmNavbar').collapse('hide');
+
+        adjustHeightOfPage($(this).data("no")); // Adjust page height       
+    });
+
+    /* Browser resized 
+    -----------------------------------------*/
+    $( window ).resize(function() {
+        var currentPageNo = $(".cd-hero-slider li.selected .js-tm-page-content").data("page-no");
+        
+        // wait 3 seconds
+        setTimeout(function() {
+            adjustHeightOfPage( currentPageNo );
+        }, 1000);
+        
+    });
+
+    $('body').addClass('loaded');
+               
+});
+
+
+    </script>
+</body>
+
+</html>
